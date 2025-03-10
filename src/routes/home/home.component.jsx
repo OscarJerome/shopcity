@@ -1,7 +1,5 @@
-// import { Outlet } from "react-router";
-import { Fragment } from "react"
-import Directory from "../../components/Directory/directory.component";
 
+import Directory from "../../components/Directory/directory.component";
 
 const Home = () => {
   const categories = 
@@ -32,18 +30,17 @@ const Home = () => {
       "title": "Adults",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
      
-    }
+    },
 
   
 ];
 
-  
+  // console.log("Home Page");
   return (
-    <Fragment>
-       
+    <>
       <Directory categories = {categories} />
-    </Fragment>
+    </>
   )
 }
 
-export default Home
+export default Home;

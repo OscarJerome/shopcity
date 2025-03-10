@@ -1,32 +1,31 @@
-import { Outlet ,Link} from "react-router"
 import { Fragment } from "react";
-
+import { Outlet, Link } from "react-router"
+import "./navigation.styles.scss";
+// import {ReactComponent as ShopLogo} from "../../assets/shopify.svg";
 
 const Navigation = () => {
     return(
-        <Fragment   >
-            <div className="navigation">
-        <div>
-            <div>
-                <Link className ='nav-link' to ='/' >
-                    Logo
+      <Fragment>
+        <div className="navigation" >
+            <Link className="logo-container" to= "/">
+                ShopCity
+            </Link>
+           
+
+            <div className="nav-links-container">
+                <Link className="nav-link" to = "/shop">
+                Shop
+                </Link>
+
+                <Link className="nav-link" to = "/signIn">
+                Sign In
                 </Link>
             </div>
-            <div className="links-container">
-                <Link className ='nav-link' to ='/shop' >
-                    Shop
-                </Link>
-            </div>
-          {/* <h2>I am the Navigation Bar.</h2> */}
+         
         </div>
-        <Outlet />
-      </div>
-
-        </Fragment>                                
-
-    );
-};
-  
-
+        <Outlet /> 
+      </Fragment>
+    )
+  }
 
   export default Navigation;
